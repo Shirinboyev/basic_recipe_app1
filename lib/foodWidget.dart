@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+   Map data = {
+    'Chicken':{'time': '15', 'star':'4.5', 'cal':'250'},
+    'Pizza' :{'time': '20', 'star':'3.5', 'cal':'300'},
+    'Burger':{'time': '10', 'star':'2.5', 'cal':'350'},
+    'Somsa' :{'time': '30', 'star':'5.0', 'cal':'400'},
+    'Lagmon': {'time': '25', 'star':'5.0', 'cal':'300'},
+   };
+
+  
 class foodWidget extends StatelessWidget {
   final String food;
   const foodWidget({
@@ -12,8 +21,8 @@ class foodWidget extends StatelessWidget {
         backgroundImage: AssetImage('images/${food}.png'),
       ),
       title: Text(food,
-          style: TextStyle(
-            fontSize: 18,
+            style: TextStyle(
+              fontSize: 18,
             fontWeight: FontWeight.w500,
           )),
       subtitle: Row(
@@ -24,9 +33,9 @@ class foodWidget extends StatelessWidget {
             size: 20,
             color: Colors.grey[300],
           ),
-          Text(
-            '20 min',
-            style: TextStyle(
+          Text( 
+            data[food]['time'],
+          style: TextStyle(
               color: Colors.grey[400],
             ),
           ),
@@ -35,7 +44,7 @@ class foodWidget extends StatelessWidget {
             size: 20,
             color: Colors.yellow[700],
           ),
-          Text('5.0',
+          Text(data[food]['star'],
               style: TextStyle(
                 color: Colors.yellow[700],
               )),
@@ -44,7 +53,7 @@ class foodWidget extends StatelessWidget {
             size: 20,
             color: Colors.red[300],
           ),
-          Text('200 cal',
+          Text(data[food]['cal'],
               style: TextStyle(
                 color: Colors.red[300],
               )),
