@@ -5,7 +5,6 @@ class foodWidget extends StatelessWidget {
     super.key,
     required this.food,
   });
-
   @override
   Widget build(BuildContext context) {
     return ListTile(
