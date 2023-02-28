@@ -1,3 +1,4 @@
+import 'package:basic_recipe_app1/Pizza.dart';
 import 'package:flutter/material.dart';
    Map data = {
     'Chicken':{'time': '15', 'star':'4.5', 'cal':'250'},
@@ -18,6 +19,9 @@ class foodWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Pizza(data: data[food],name: food),));
+      },
       leading: CircleAvatar(
         backgroundImage: AssetImage('images/${food}.png'),
       ),
@@ -29,6 +33,7 @@ class foodWidget extends StatelessWidget {
       subtitle: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          
           Icon(
             Icons.access_time,
             size: 20,
@@ -58,6 +63,7 @@ class foodWidget extends StatelessWidget {
               style: TextStyle(
                 color: Colors.red[300],
               )),
+           
         ],
       ),
       trailing: Icon(Icons.arrow_forward_ios),
