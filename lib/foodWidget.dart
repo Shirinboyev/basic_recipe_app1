@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
     'Pizza' :{'time': '20', 'star':'3.5', 'cal':'300'},
     'Burger':{'time': '10', 'star':'2.5', 'cal':'350'},
     'Somsa' :{'time': '30', 'star':'5.0', 'cal':'400'},
-    'Lagmon': {'time': '25', 'star':'5.0', 'cal':'300'},
+    'Lagmon': {'time': '25', 'star':'5.0', 'cal':'300 '},
+    'Barak': {'time': '15', 'star':'5.0', 'cal':'500 '},
    };
 
   

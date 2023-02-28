@@ -14,11 +14,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List foods = [
-    'Chicken',
     'Pizza',
     'Burger',
+    'Chicken',
     'Somsa',
     'Lagmon',
+    'Barak',
   ];
   List<Widget> getFood(foods) {
     List<Widget> foodList = [];
