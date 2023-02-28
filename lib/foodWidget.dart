@@ -1,15 +1,15 @@
 import 'package:basic_recipe_app1/Pizza.dart';
 import 'package:flutter/material.dart';
    Map data = {
-    'Chicken':{'time': '15', 'star':'4.5', 'cal':'250'},
-    'Pizza' :{'time': '20', 'star':'3.5', 'cal':'300'},
-    'Burger':{'time': '10', 'star':'2.5', 'cal':'350'},
-    'Somsa' :{'time': '30', 'star':'5.0', 'cal':'400'},
-    'Lagmon': {'time': '25', 'star':'5.0', 'cal':'300 '},
-    'Barak': {'time': '15', 'star':'5.0', 'cal':'500 '},
+    'Chicken':   {'time': '15', 'star':'4.5', 'cal':'350'},
+    'Pizza' :    {'time': '20', 'star':'3.5', 'cal':'300'},
+    'Burger':    {'time': '10', 'star':'2.5', 'cal':'350'},
+    'Somsa' :    {'time': '30', 'star':'5.0', 'cal':'400'},
+    'Lagmon':    {'time': '25', 'star':'5.5', 'cal':'300'},
+    'Barak':     {'time': '15', 'star':'6.0', 'cal':'500'},
+    'Palov':     {'time': '40', 'star':'7.0', 'cal':'600'},
+    'Perashki':  {'time': '10', 'star':'3.0', 'cal':'250'},
    };
-
-  
 class foodWidget extends StatelessWidget {
   final String food;
   const foodWidget({
@@ -20,7 +20,7 @@ class foodWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Pizza(data: data[food],name: food),));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Pizza(data: data[food],name: food,)));
       },
       leading: CircleAvatar(
         backgroundImage: AssetImage('images/${food}.png'),
@@ -33,7 +33,6 @@ class foodWidget extends StatelessWidget {
       subtitle: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          
           Icon(
             Icons.access_time,
             size: 20,
@@ -63,10 +62,9 @@ class foodWidget extends StatelessWidget {
               style: TextStyle(
                 color: Colors.red[300],
               )),
-           
         ],
       ),
-      trailing: Icon(Icons.arrow_forward_ios),
+      trailing: Icon(Icons.favorite_outline,color: Colors.grey,),
     );
   }
 }

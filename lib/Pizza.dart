@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Pizza extends StatefulWidget {
  final String name;
  final Map data;
-  const Pizza({super.key,required this.data,required this.name});
+  const Pizza({super.key,required this.data,required this.name,});
 
   @override
   State<Pizza> createState() => _PizzaState();

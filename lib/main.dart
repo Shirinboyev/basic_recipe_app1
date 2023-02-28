@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:basic_recipe_app1/foodWidget.dart';
-
 void main() {
   runApp(const HomePage());
 }
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   List foods = [
     'Pizza',
@@ -20,6 +16,8 @@ class _HomePageState extends State<HomePage> {
     'Somsa',
     'Lagmon',
     'Barak',
+    'Palov',
+    'Perashki',
   ];
   List<Widget> getFood(foods) {
     List<Widget> foodList = [];
@@ -30,7 +28,6 @@ class _HomePageState extends State<HomePage> {
     }
     return foodList;
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
